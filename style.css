@@ -356,4 +356,123 @@ a {
     transform: scale(1) rotateY(360deg);
     opacity: 1;
 }
+#twelve {
+    width: 220px;
+    height: 80px;
+    font-size: 26px;
+    text-transform: uppercase;
+    color: blue;
+    transition: all 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#twelve::before, #twelve::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: #ff0;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition: all 0.5s;
+    z-index: -1;
+}
+#twelve::before {
+    left: 0;
+    box-shadow: -100px 0 0 #ff0;
+}
+#twelve::after {
+    right: 0;
+    box-shadow: 100px 0 0 #ff0;
+}
+#twelve:hover::before {
+    left: 50%;
+    box-shadow: 30px 0 0 #ff0;
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 1;
+}
+#twelve:hover::after {
+    right: 50%;
+    box-shadow: -30px 0 0 #ff0;
+    transform: translateX(50%) translateY(-50%);
+    opacity: 1;
+}
+span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ff0;
+    border-radius: 8px;
+    transform: scale(0);
+    transition: all 0.5s;
+    z-index: -1;
+}
+#twelve:hover span {
+    transform: scale(1);
+    transition-delay: 0.5s;
+}
+#twelve:hover {
+    color: #262626;
+    transition-delay: 0.5s;
+}
+#thirteen {
+    width: 400px;
+    height: 60px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    line-height: 60px;
+    transition: all 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+}
+#thirteen::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 100%;
+    height: 100%;
+    background-color: #20caff;
+    z-index: -1;
+    mix-blend-mode: multiply;
+    transition: all 0.2s;
+    transform-origin: top;
+} 
+#thirteen:hover::before {
+    top: -6px;
+    left: 0;
+    transform: perspective(1000px) rotateX(75deg);
+}  
+#thirteen::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 100%;
+    height: 100%;
+    background-color: #ff7675;
+    z-index: -1;
+    mix-blend-mode: multiply;
+    transition: all 0.2s;
+    transform-origin: bottom;
+}
+#thirteen:hover::after {
+    top: 6px;
+    left: 0;
+    transform: perspective(1000px) rotateX(-75deg);
+} 
+#thirteen:hover {
+    color: #272727;
+} 
+
+
+
     
